@@ -559,7 +559,7 @@ jobs:
           env
           sudo -E PATH=$PATH ./script/critest.sh "${{github.workspace}}/report"
 
-      - if: matrix.os != 'ubuntu-24.04-arm' && matrix.os != 'ubuntu-24.04-riscv'
+      - if: matrix.os != 'ubuntu-24.04-arm'
         name: Checkpoint/Restore Disable via CRI
         env:
           TEST_RUNTIME: ${{ matrix.runtime }}
